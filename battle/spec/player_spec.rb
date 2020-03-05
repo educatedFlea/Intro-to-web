@@ -16,13 +16,6 @@ RSpec.describe Player do
     end 
   end 
 
-  describe '#attack' do
-    it 'damage the player' do 
-      allow(luigi).to receive(:receive_damage)
-      mario.attack(luigi)
-    end 
-  end 
-
   describe '#receive_damage' do 
     it 'reduces the players HP' do 
       expect{luigi.receive_damage}.to change {luigi.hit_points}.by -10
